@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-10T22:55:22.134Z",
+    "end": "2026-05-10T22:55:22.138Z",
+    "duration": 4,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4ea9eb80-339d-478e-a550-beab538eed39",
+      "title": "",
+      "fullFile": "C:\\Workspace\\pgats\\desafio-aula-6\\test\\gerenciarUsuarios.test.js",
+      "file": "\\test\\gerenciarUsuarios.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8ee3e39-471b-4354-81a4-afd67e47cf18",
+          "title": "Testes da Gestão de Usuários",
+          "fullFile": "C:\\Workspace\\pgats\\desafio-aula-6\\test\\gerenciarUsuarios.test.js",
+          "file": "\\test\\gerenciarUsuarios.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1) Sucesso: deve retornar mensagem de sucesso ao informar email e senha corretos",
+              "fullTitle": "Testes da Gestão de Usuários 1) Sucesso: deve retornar mensagem de sucesso ao informar email e senha corretos",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\nconst retorno = fazerLogin('alice@email.com', 'alice123');\n// Assert\nassert.equal(retorno, 'Login realizado com sucesso.');",
+              "err": {},
+              "uuid": "c59f51f2-3136-4818-ba7c-2d8e2cd412be",
+              "parentUUID": "a8ee3e39-471b-4354-81a4-afd67e47cf18",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2) Credencial expirada: deve informar que as credenciais expiraram",
+              "fullTitle": "Testes da Gestão de Usuários 2) Credencial expirada: deve informar que as credenciais expiraram",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\nconst retorno = fazerLogin('carla@email.com', 'carla789');\n// Assert\nassert.equal(retorno, 'Renove suas credenciais.');",
+              "err": {},
+              "uuid": "6fc1ae05-9080-4d80-a314-f52fab0bb859",
+              "parentUUID": "a8ee3e39-471b-4354-81a4-afd67e47cf18",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3) Usuário não encontrado: deve informar credenciais incorretas quando o email não existe",
+              "fullTitle": "Testes da Gestão de Usuários 3) Usuário não encontrado: deve informar credenciais incorretas quando o email não existe",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\nconst retorno = fazerLogin('naoexiste@email.com', 'qualquersenha');\n// Assert\nassert.equal(retorno, 'Credenciais incorretas.');",
+              "err": {},
+              "uuid": "6dd72121-ec1a-463b-9d4b-bc5dc52d8356",
+              "parentUUID": "a8ee3e39-471b-4354-81a4-afd67e47cf18",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4) Senha incorreta: deve informar credenciais incorretas quando a senha está errada para o usuário encontrado",
+              "fullTitle": "Testes da Gestão de Usuários 4) Senha incorreta: deve informar credenciais incorretas quando a senha está errada para o usuário encontrado",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Act\nconst retorno = fazerLogin('alice@email.com', 'senhaErrada');\n// Assert\nassert.equal(retorno, 'Credenciais incorretas.');",
+              "err": {},
+              "uuid": "88bc553e-70ba-409a-94ae-c04297ca0ae2",
+              "parentUUID": "a8ee3e39-471b-4354-81a4-afd67e47cf18",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c59f51f2-3136-4818-ba7c-2d8e2cd412be",
+            "6fc1ae05-9080-4d80-a314-f52fab0bb859",
+            "6dd72121-ec1a-463b-9d4b-bc5dc52d8356",
+            "88bc553e-70ba-409a-94ae-c04297ca0ae2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report",
+        "reportFilename": "mochawesome"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
